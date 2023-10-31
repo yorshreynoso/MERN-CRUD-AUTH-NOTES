@@ -1,0 +1,1 @@
+export const TOKEN_SECRET_JWT = "NoboDyKn0oOwnMy$3cre3t"; 
