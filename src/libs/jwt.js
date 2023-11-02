@@ -1,5 +1,6 @@
 import jwt  from 'jsonwebtoken';
-import  { TOKEN_SECRET_JWT } from '../config.js';
+import config from 'config';
+const  { TOKEN_SECRET_JWT, EXPIRES_TOKEN } = config.get('Auth');
 
 
 function createToken(payload) {
@@ -9,14 +10,12 @@ function createToken(payload) {
             payload,
             TOKEN_SECRET_JWT, 
         {
-            expiresIn:"1d"
+            expiresIn:EXPIRES_TOKEN //default 1d
         }, 
         (err, token) => {
             if(err) reject(err);
             resolve(token);
-        }); 
-
-        
+        });  
     });
 }
 

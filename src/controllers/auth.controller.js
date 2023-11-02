@@ -2,7 +2,10 @@ import User from "../models/user.model.js";
 import bcrypt from 'bcryptjs';
 import { createToken } from '../libs/jwt.js';
 import jwt  from "jsonwebtoken";
-import { TOKEN_SECRET_JWT } from '../config.js';
+import config from 'config';
+
+
+const { TOKEN_SECRET_JWT } = config.get("Auth");
 
 
 export const register = async (req, res) => {

@@ -1,16 +1,17 @@
 import mongoose from "mongoose";
+import 'dotenv/config';
+import config from 'config';
 
-const url = 'mongodb+srv://yorshreynoso:qJERzR9EUVOsCOaX@clustertest.eq4leqk.mongodb.net/';
+const { URL } = config.get("Database");
 
  const connectDB = async () => {
     try {
-        await mongoose.connect(`${ url }`);
-        console.info(`MongoDB Connected Correctly`);
+        await mongoose.connect(`${ URL }`);
+        console.info(`MongoDB Connected Correctly, mode:${process.env.NODE_ENV}`);
         
     } catch (error) {
         console.error(error);
     }
-
 };
 
 //export { connectDB }; or

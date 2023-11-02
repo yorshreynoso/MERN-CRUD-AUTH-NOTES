@@ -2,9 +2,12 @@ import  app from './app.js'; // our own modules we must add .js
 // import { connectDB }  from './db.js';    // or
 import  connectDB  from './db.js';
 
+import config from 'config';
 
-app.listen(3000, ()=> {
-    console.info(`Server on port 3000`);
+const { PORT } = config.get("configuration");
+
+app.listen(PORT, ()=> {
+    console.info(`Server on port ${PORT}, mode: ${process.env.NODE_ENV}`);
 });
 
 connectDB();
