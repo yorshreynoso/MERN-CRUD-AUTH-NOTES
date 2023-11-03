@@ -1,0 +1,15 @@
+{
+    "configuration": {
+        "PORT": 4000
+    },
+    "Database": {
+        "URL":"mongodb+srv://yorshreynoso:qJERzR9EUVOsCOaX@clustertest.eq4leqk.mongodb.net/'"
+    },
+    "Auth": {
+        "TOKEN_SECRET_JWT":"NoboDyKn0oOwnMy$3cre3t",
+        "EXPIRES_TOKEN":"1d"
+    }, 
+    "Morgan":{
+        "MODE": "dev"
+    }
+}
