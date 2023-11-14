@@ -1,7 +1,7 @@
 function HomePage() {
     return(
         <div>
-            pelapapas
+            Hello world! under maintenance
         </div>
     )
 }
