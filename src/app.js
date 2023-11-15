@@ -9,9 +9,13 @@ import taskRoutes from './routes/task.routes.js';
 
 const { MODE } = config.get("Morgan");
 
+const corsOptions = {
+    origin: 'http://www.azliproject.tech.s3-website-us-east-1.amazonaws.com', // Replace with your actual origin
+    credentials: true,
+  };
 const app = express();
-// app.use(cors( { origin: "http://www.azliproject.tech.s3-website-us-east-1.amazonaws.com"}));
-app.use(cors());
+
+app.use(cors(corsOptions));
 
 app.use(morgan(MODE));
 app.use(cookieParser());
