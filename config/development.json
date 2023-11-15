@@ -1,6 +1,6 @@
 {
     "configuration": {
-        "PORT": 8080
+        "PORT": 4000
     },
     "Database": {
         "URL":"mongodb+srv://yorshreynoso:qJERzR9EUVOsCOaX@clustertest.eq4leqk.mongodb.net/'"
